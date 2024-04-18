@@ -230,7 +230,7 @@ extension Certificate {
         }
     }
 
-    @usableFromInline
+    @frozen @usableFromInline
     struct NameSequence: Sequence {
         @usableFromInline
         var subject: DistinguishedName
@@ -249,6 +249,7 @@ extension Certificate {
             return Iterator(self.subject, self.alternativeNames)
         }
 
+        @frozen
         @usableFromInline
         struct Iterator: IteratorProtocol {
             @usableFromInline

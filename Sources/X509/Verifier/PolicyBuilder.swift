@@ -37,7 +37,7 @@ extension PolicyBuilder {
 
 // MARK: empty policy
 extension PolicyBuilder {
-    @usableFromInline
+    @frozen @usableFromInline
     struct Empty: VerifierPolicy {
         @inlinable
         var verifyingCriticalExtensions: [SwiftASN1.ASN1ObjectIdentifier] { [] }
@@ -59,7 +59,7 @@ extension PolicyBuilder {
 
 // MARK: concatenated policies
 extension PolicyBuilder {
-    @usableFromInline
+    @frozen @usableFromInline
     struct Tuple2<First: VerifierPolicy, Second: VerifierPolicy>: VerifierPolicy {
         @usableFromInline
         var first: First
@@ -107,7 +107,7 @@ extension PolicyBuilder {
 
 // MARK: if
 extension PolicyBuilder {
-    @usableFromInline
+    @frozen @usableFromInline
     struct WrappedOptional<Wrapped>: VerifierPolicy where Wrapped: VerifierPolicy {
         @usableFromInline
         var wrapped: Wrapped?
@@ -192,7 +192,7 @@ extension PolicyBuilder {
 
 extension PolicyBuilder {
     @frozen
-    @usableFromInline
+    @frozen @usableFromInline
     struct CachedVerifyingCriticalExtensions<Wrapped: VerifierPolicy>: VerifierPolicy {
         @usableFromInline
         let verifyingCriticalExtensions: [ASN1ObjectIdentifier]

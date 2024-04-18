@@ -238,7 +238,7 @@ struct ReverseDNSLabelSequence: Sequence {
         return Iterator(self.base)
     }
 
-    @usableFromInline
+    @frozen @usableFromInline
     struct Iterator: IteratorProtocol {
         @usableFromInline
         var base: String.UTF8View.SubSequence?
