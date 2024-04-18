@@ -16,6 +16,7 @@ import Foundation
 import SwiftASN1
 
 /// A sub-policy of the ``RFC5280Policy`` that polices expiry.
+@frozen
 @usableFromInline
 struct ExpiryPolicy: VerifierPolicy {
     @usableFromInline

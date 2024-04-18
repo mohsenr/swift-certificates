@@ -24,6 +24,7 @@ import Foundation
 /// This type hides the specifics of how CMS represents data, instead offering a limited
 /// view over a CMS signed-data payload. It also abstracts the specific ASN.1 layout of the
 /// signature.
+@frozen
 @_spi(CMS)
 public struct CMSSignature: Sendable, Hashable {
     @usableFromInline

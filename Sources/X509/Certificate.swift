@@ -58,7 +58,7 @@ import SwiftASN1
 /// across the rest of the data. Allowing users to change this data makes it easy to accidentally modify
 /// a ``Certificate`` in one part of your code and not realise that the signature has inevitably
 /// been invalidated.
-public struct Certificate {
+@frozen public struct Certificate {
     /// The X.509 version of this certificate.
     ///
     /// This should be set to ``Certificate/Version-swift.struct/v3`` in

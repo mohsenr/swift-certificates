@@ -26,6 +26,7 @@ import SwiftASN1
 /// }
 /// ```
 @resultBuilder
+@frozen
 public struct PolicyBuilder {}
 
 extension PolicyBuilder {

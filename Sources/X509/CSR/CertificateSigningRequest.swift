@@ -20,7 +20,7 @@ import SwiftASN1
 /// Certificate Signing Requests are used to encapsulate information that an end-entity would like
 /// encapsulated in a certificate. They are typically processed by Certificate Authorities and turned
 /// into certificates signed by that CA.
-public struct CertificateSigningRequest {
+@frozen public struct CertificateSigningRequest {
     /// The version of this CSR.
     ///
     /// This project has full support for ``CertificateSigningRequest/Version-swift.struct/v1``.
