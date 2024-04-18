@@ -18,7 +18,7 @@ import SwiftASN1
 ///
 /// This usage restriction may be employed when a key that could conceptually be used
 /// for more than one operation (such as an RSA key) is to be restricted.
-public struct KeyUsage {
+@frozen public struct KeyUsage {
     // KeyUsage is only actually 9-bits wide, so we store it in a UInt16 in bits 0 through 8.
     // To avoid the need to do bit swaps, we treat this as though the bits were encoded in ASN.1:
     // bit zero is the highest bit, bit 16 is the lowest.

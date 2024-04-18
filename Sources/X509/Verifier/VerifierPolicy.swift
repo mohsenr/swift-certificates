@@ -66,7 +66,7 @@ public enum PolicyEvaluationResult: Sendable {
     }
 }
 
-public struct PolicyFailureReason: Sendable {
+@frozen public struct PolicyFailureReason: Sendable {
     var storage: @Sendable () -> String
 
     public init(_ makeString: @autoclosure @Sendable @escaping () -> String) {

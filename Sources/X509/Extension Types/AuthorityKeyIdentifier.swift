@@ -16,7 +16,7 @@ import SwiftASN1
 
 /// Provides information about the public key corresponding to the private key that was
 /// used to sign a specific certificate.
-public struct AuthorityKeyIdentifier {
+@frozen public struct AuthorityKeyIdentifier {
     /// An opaque sequence of bytes uniquely derived from the public key of the issuing
     /// CA.
     ///

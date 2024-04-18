@@ -19,7 +19,7 @@ import SwiftASN1
 /// The identities attested in this extension belong to the subject of the certificate.
 /// Users of the certificate may validate that these names correspond to a name they are
 /// expecting, depending on the context.
-public struct SubjectAlternativeNames {
+@frozen public struct SubjectAlternativeNames {
     @usableFromInline
     var names: [GeneralName]
 

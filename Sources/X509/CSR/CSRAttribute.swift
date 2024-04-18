@@ -23,7 +23,7 @@ extension CertificateSigningRequest {
     ///
     /// ``Attribute``s are a general representation, keyed by an object identifier and storing a `SET` of arbitrary values.
     /// This `SET` cannot be empty. Individual ``Attribute``s can be parsed into more specific values as-needed.
-    public struct Attribute {
+    @frozen public struct Attribute {
         /// The identifier for this attribute type.
         ///
         /// Common values are stored in `ASN1ObjectIdentifier.X509ExtensionID`.

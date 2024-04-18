@@ -22,7 +22,7 @@ import struct Foundation.Data
 /// That value can be used to build the ``AuthorityKeyIdentifier/keyIdentifier`` field in
 /// any certificate issued by this certificate. This makes it possible to identify a certificate
 /// possessing the key that issued another certificate.
-public struct SubjectKeyIdentifier {
+@frozen public struct SubjectKeyIdentifier {
     public var keyIdentifier: ArraySlice<UInt8>
 
     /// Construct a Subject Key Identifier extension with a specific key identifier.

@@ -77,7 +77,7 @@ extension Certificate {
     /// ```
     ///
     /// This interface also makes it easy to mark specific extensions as critical.
-    public struct Extensions {
+    @frozen public struct Extensions {
         @usableFromInline
         var _extensions: [Certificate.Extension]
 

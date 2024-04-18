@@ -25,8 +25,8 @@ extension RelativeDistinguishedName {
     /// ``type`` and the value being stored in ``value``. In the vast majority of cases the ``value``
     /// of the node will be an `ASN1PrintableString` or `ASN1UTF8String`, but the value can only
     /// be derived by inspection.
-    public struct Attribute {
-        public struct Value: Hashable, Sendable {
+    @frozen public struct Attribute {
+        @frozen public struct Value: Hashable, Sendable {
             @usableFromInline
             enum Storage: Hashable, Sendable {
                 /// ``ASN1PrintableString``

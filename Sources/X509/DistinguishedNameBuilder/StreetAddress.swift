@@ -17,7 +17,7 @@ import SwiftASN1
 /// Set the Street Address (STREET) of a ``DistinguishedName``.
 ///
 /// This type is used in ``DistinguishedNameBuilder`` contexts.
-public struct StreetAddress: RelativeDistinguishedNameConvertible {
+@frozen public struct StreetAddress: RelativeDistinguishedNameConvertible {
     /// The value of the street address field.
     public var name: String
 

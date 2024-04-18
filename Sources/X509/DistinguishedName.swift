@@ -80,7 +80,7 @@ import SwiftASN1
 /// ```
 ///
 /// This convenient shorthand is particularly valuable in testing, as well as in code that needs to generate certificates or CSRs.
-public struct DistinguishedName {
+@frozen public struct DistinguishedName {
     @usableFromInline
     var rdns: [RelativeDistinguishedName]
 

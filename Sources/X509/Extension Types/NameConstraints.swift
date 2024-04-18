@@ -23,8 +23,8 @@ import SwiftASN1
 /// Restrictions are defined in terms of both permitted and forbidden subtrees. The forbidden trees
 /// are consulted first, and if a name is matched in a forbidden tree then it does not matter whether
 /// the same name is also matched in a permitted tree.
-public struct NameConstraints {
-    public struct DNSNames: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
+@frozen public struct NameConstraints {
+    @frozen public struct DNSNames: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
         public typealias Element = String
 
         @inlinable
@@ -60,7 +60,7 @@ public struct NameConstraints {
             hasher.combine(contentsOf: self)
         }
 
-        public struct Index: Comparable {
+        @frozen public struct Index: Comparable {
             @inlinable
             public static func < (lhs: Self, rhs: Self) -> Bool {
                 lhs.wrapped < rhs.wrapped
@@ -122,7 +122,7 @@ public struct NameConstraints {
         }
     }
 
-    public struct IPRanges: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
+    @frozen public struct IPRanges: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
         @inlinable
         public static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.elementsEqual(rhs)
@@ -156,7 +156,7 @@ public struct NameConstraints {
             hasher.combine(contentsOf: self)
         }
 
-        public struct Index: Comparable {
+        @frozen public struct Index: Comparable {
             @inlinable
             public static func < (lhs: Self, rhs: Self) -> Bool {
                 lhs.wrapped < rhs.wrapped
@@ -218,7 +218,7 @@ public struct NameConstraints {
         }
     }
 
-    public struct EmailAddresses: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
+    @frozen public struct EmailAddresses: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
         @inlinable
         public static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.elementsEqual(rhs)
@@ -252,7 +252,7 @@ public struct NameConstraints {
             hasher.combine(contentsOf: self)
         }
 
-        public struct Index: Comparable {
+        @frozen public struct Index: Comparable {
             @inlinable
             public static func < (lhs: Self, rhs: Self) -> Bool {
                 lhs.wrapped < rhs.wrapped
@@ -314,7 +314,7 @@ public struct NameConstraints {
         }
     }
 
-    public struct URIDomains: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
+    @frozen public struct URIDomains: Hashable, Sendable, Collection, ExpressibleByArrayLiteral, CustomStringConvertible {
         @inlinable
         public static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.elementsEqual(rhs)
@@ -348,7 +348,7 @@ public struct NameConstraints {
             hasher.combine(contentsOf: self)
         }
 
-        public struct Index: Comparable {
+        @frozen public struct Index: Comparable {
             @inlinable
             public static func < (lhs: Self, rhs: Self) -> Bool {
                 lhs.wrapped < rhs.wrapped

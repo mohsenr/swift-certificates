@@ -15,7 +15,7 @@
 import _CertificateInternals
 
 /// A collection of ``Certificate`` objects for use in a verifier.
-public struct CertificateStore: Sendable, Hashable {
+@frozen public struct CertificateStore: Sendable, Hashable {
 
     @usableFromInline
     var systemTrustStore: Bool

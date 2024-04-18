@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-public struct UnverifiedCertificateChain: Sendable, Hashable {
+@frozen public struct UnverifiedCertificateChain: Sendable, Hashable {
     @usableFromInline
     var certificates: [Certificate]
 

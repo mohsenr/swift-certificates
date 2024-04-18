@@ -17,7 +17,7 @@ import SwiftASN1
 /// Indicates one or more purposes for which the certified public key
 /// may be used, in addition to or instead of the the purposes indicated
 /// in the ``KeyUsage`` extension.
-public struct ExtendedKeyUsage {
+@frozen public struct ExtendedKeyUsage {
     @usableFromInline
     var usages: [Usage]
 
@@ -186,7 +186,7 @@ extension ExtendedKeyUsage {
     /// An acceptable usage for a certificate as attested in an
     /// ``ExtendedKeyUsage``
     /// extension.
-    public struct Usage {
+    @frozen public struct Usage {
         @usableFromInline
         enum Backing {
             case serverAuth

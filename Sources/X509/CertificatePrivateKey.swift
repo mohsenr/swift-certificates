@@ -26,7 +26,7 @@ extension Certificate {
     ///
     /// As private keys are never sent over the wire, this type does not offer
     /// support for being unwrapped back into the underlying key types.
-    public struct PrivateKey {
+    @frozen public struct PrivateKey {
         @usableFromInline
         var backing: BackingPrivateKey
 

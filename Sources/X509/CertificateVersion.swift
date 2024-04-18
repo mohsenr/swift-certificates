@@ -18,7 +18,7 @@ extension Certificate {
     /// Almost all certificates in use today use X.509v3, and this should be the default for almost
     /// all use today. In very rare cases X.509v1 certificates can be found, but they should be avoided in
     /// almost all cases.
-    public struct Version {
+    @frozen public struct Version {
         @usableFromInline
         var rawValue: Int
 

@@ -17,7 +17,7 @@ import SwiftASN1
 /// Set the Common Name (CN) of a ``DistinguishedName``.
 ///
 /// This type is used in ``DistinguishedNameBuilder`` contexts.
-public struct CommonName: RelativeDistinguishedNameConvertible {
+@frozen public struct CommonName: RelativeDistinguishedNameConvertible {
     /// The value of the common name
     public var name: String
 

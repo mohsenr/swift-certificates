@@ -35,7 +35,7 @@ extension Certificate {
     ///
     /// Users can write their own types by using a similar approach to these types, when it is necessary to add support for
     /// different X.509 extension.
-    public struct Extension {
+    @frozen public struct Extension {
         /// The identifier for this extension type.
         ///
         /// Common values are stored in `ASN1ObjectIdentifier.X509ExtensionID`.

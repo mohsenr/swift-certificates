@@ -147,7 +147,7 @@ extension GeneralName: CustomStringConvertible {
 //     partyName               [1]     DirectoryString }
 
 extension GeneralName {
-    public struct OtherName: Hashable, Sendable, DERImplicitlyTaggable {
+    @frozen public struct OtherName: Hashable, Sendable, DERImplicitlyTaggable {
         @inlinable
         public static var defaultIdentifier: ASN1Identifier {
             .sequence

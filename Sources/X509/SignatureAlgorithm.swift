@@ -21,7 +21,7 @@ extension Certificate {
     /// This type represents an unbounded enumeration. There are potentially infinite
     /// signature algorithms. Users are able to create representations of the signature
     /// algorithms this library supports by using static fields on this type.
-    public struct SignatureAlgorithm {
+    @frozen public struct SignatureAlgorithm {
         @usableFromInline
         var _algorithmIdentifier: AlgorithmIdentifier
 

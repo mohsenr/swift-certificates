@@ -26,8 +26,7 @@ import SwiftASN1
 /// }
 /// ```
 @resultBuilder
-@frozen
-public struct PolicyBuilder {}
+@frozen public struct PolicyBuilder {}
 
 extension PolicyBuilder {
     @inlinable
@@ -138,7 +137,7 @@ extension PolicyBuilder {
 // MARK: if/else and switch
 extension PolicyBuilder {
     /// implementation detail of ``PolicyBuilder`` which should not be used outside the implementation of ``PolicyBuilder``.
-    public struct _Either<First: VerifierPolicy, Second: VerifierPolicy>: VerifierPolicy {
+    @frozen public struct _Either<First: VerifierPolicy, Second: VerifierPolicy>: VerifierPolicy {
         @usableFromInline
         enum Storage {
             case first(First)

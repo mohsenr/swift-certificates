@@ -39,7 +39,7 @@
 ///
 /// Users are also able to mark specific extensions as critical by using the ``Critical`` helper type.
 @resultBuilder
-public struct ExtensionsBuilder {
+@frozen public struct ExtensionsBuilder {
     @inlinable
     public static func buildExpression<Extension: CertificateExtensionConvertible>(
         _ expression: Extension
@@ -126,8 +126,7 @@ public protocol CertificateExtensionConvertible {
 /// Marks a given ``CertificateExtensionConvertible`` value as critical.
 ///
 /// This type is used only within the ``ExtensionsBuilder`` DSL to mark extensions as critical.
-@frozen
-public struct Critical<BaseExtension: CertificateExtensionConvertible>: CertificateExtensionConvertible {
+@frozen public struct Critical<BaseExtension: CertificateExtensionConvertible>: CertificateExtensionConvertible {
     /// The ``CertificateExtensionConvertible`` backing this value.
     public var base: BaseExtension
 

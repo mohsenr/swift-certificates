@@ -35,7 +35,7 @@ public protocol OCSPRequester: Sendable {
     func query(request: [UInt8], uri: String) async -> OCSPRequesterQueryResult
 }
 
-public struct OCSPRequesterQueryResult: Sendable {
+@frozen public struct OCSPRequesterQueryResult: Sendable {
     @usableFromInline
     enum Storage: Sendable {
         case success([UInt8])

@@ -19,7 +19,7 @@ import SwiftASN1
 /// This extension behaves as a collection of ``AuthorityInformationAccess/AccessDescription`` objects.
 ///
 /// In practice this most commonly contains OCSP servers and links to the issuing CA certificate.
-public struct AuthorityInformationAccess {
+@frozen public struct AuthorityInformationAccess {
     @usableFromInline
     var descriptions: [AccessDescription]
 
@@ -105,7 +105,7 @@ extension AuthorityInformationAccess: RangeReplaceableCollection {
 extension AuthorityInformationAccess {
     /// Describes the location and format of additional information provided
     /// by the issuer of a given certificate.
-    public struct AccessDescription {
+    @frozen public struct AccessDescription {
         /// The format and meaning of the information at ``location``.
         public var method: AccessMethod
 
@@ -147,7 +147,7 @@ extension AuthorityInformationAccess.AccessDescription {
     /// The format and meaning of the information included in a single
     /// ``AuthorityInformationAccess/AccessDescription``
     /// object.
-    public struct AccessMethod {
+    @frozen public struct AccessMethod {
         @usableFromInline
         var backing: Backing
 

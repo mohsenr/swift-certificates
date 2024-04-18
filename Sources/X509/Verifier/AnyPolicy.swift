@@ -25,7 +25,7 @@ import SwiftASN1
 ///     }
 /// }
 /// ```
-public struct AnyPolicy: VerifierPolicy {
+@frozen public struct AnyPolicy: VerifierPolicy {
     @usableFromInline
     var policy: any VerifierPolicy
 

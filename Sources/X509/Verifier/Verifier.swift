@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 import SwiftASN1
 
-public struct Verifier<Policy: VerifierPolicy> {
+@frozen public struct Verifier<Policy: VerifierPolicy> {
     public var rootCertificates: CertificateStore
 
     public var policy: Policy
@@ -187,7 +187,7 @@ public enum VerificationResult: Hashable, Sendable {
 }
 
 extension VerificationResult {
-    public struct PolicyFailure: Hashable, Sendable {
+    @frozen public struct PolicyFailure: Hashable, Sendable {
         public var chain: UnverifiedCertificateChain
         public var policyFailureReason: PolicyFailureReason
 

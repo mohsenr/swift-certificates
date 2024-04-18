@@ -23,7 +23,7 @@ extension Certificate {
     /// This type provides an opaque wrapper around the various public key types
     /// provided by `swift-crypto`. Users are expected to construct this key from
     /// one of those types, or to decode it from the network.
-    public struct PublicKey {
+    @frozen public struct PublicKey {
         @usableFromInline
         var backing: BackingPublicKey
 

@@ -18,7 +18,7 @@ import SwiftASN1
 ///
 /// X.509 certificates contain a number of extensions. This attribute includes the extensions that the
 /// subscriber wishes the CA to embed into the certificate.
-public struct ExtensionRequest: Hashable, Sendable {
+@frozen public struct ExtensionRequest: Hashable, Sendable {
     /// The underlying extensions.
     public var extensions: Certificate.Extensions
 

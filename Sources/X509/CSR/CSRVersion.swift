@@ -17,7 +17,7 @@ extension CertificateSigningRequest {
     ///
     /// CSRs are conceptually capable of being evolved using version numbers. In practice,
     /// ``v1`` is the only version in common use.
-    public struct Version {
+    @frozen public struct Version {
         public var rawValue: Int
 
         @inlinable

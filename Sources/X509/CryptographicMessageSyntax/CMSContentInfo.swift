@@ -44,7 +44,7 @@ extension ASN1ObjectIdentifier {
 /// ContentType ::= OBJECT IDENTIFIER
 /// ```
 @usableFromInline
-struct CMSContentInfo: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
+@frozen struct CMSContentInfo: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {
         .sequence

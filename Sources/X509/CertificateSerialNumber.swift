@@ -22,7 +22,7 @@ extension Certificate {
     /// be represented using a fixed-width integer type. This type therefore represents the
     /// raw big-endian bytes of the serial number, suitable for loading into a more specific
     /// type.
-    public struct SerialNumber {
+    @frozen public struct SerialNumber {
         /// The raw big-endian bytes of the serial number.
         public var bytes: ArraySlice<UInt8>
 

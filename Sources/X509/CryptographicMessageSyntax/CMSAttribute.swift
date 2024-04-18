@@ -23,7 +23,7 @@ import SwiftASN1
 /// AttributeValue ::= ANY
 /// ```
 @usableFromInline
-struct CMSAttribute: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
+@frozen struct CMSAttribute: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
 
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

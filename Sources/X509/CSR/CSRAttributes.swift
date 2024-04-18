@@ -39,7 +39,7 @@ extension CertificateSigningRequest {
     ///
     /// Users who add their own attribute types (see ``CertificateSigningRequest/Attribute`` for more) are encouraged to add their
     /// own helper getters for those types.
-    public struct Attributes {
+    @frozen public struct Attributes {
         @usableFromInline
         var _attributes: [Attribute]
 

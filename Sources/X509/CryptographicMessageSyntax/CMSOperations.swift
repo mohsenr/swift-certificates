@@ -333,7 +333,7 @@ public enum CMS {
     @_spi(CMS)
     public typealias SignatureVerificationResult = Result<Valid, VerificationError>
 
-    public struct Valid: Hashable {
+    @frozen public struct Valid: Hashable {
         public var signer: Certificate
 
         @inlinable
@@ -346,7 +346,7 @@ public enum CMS {
         case unableToValidateSigner(SignerValidationFailure)
         case invalidCMSBlock(InvalidCMSBlock)
 
-        public struct SignerValidationFailure: Hashable, Swift.Error {
+        @frozen public struct SignerValidationFailure: Hashable, Swift.Error {
             public var validationFailures: [VerificationResult.PolicyFailure]
 
             public var signer: Certificate
@@ -358,7 +358,7 @@ public enum CMS {
             }
         }
 
-        public struct InvalidCMSBlock: Hashable, Swift.Error {
+        @frozen public struct InvalidCMSBlock: Hashable, Swift.Error {
             public var reason: String
 
             @inlinable

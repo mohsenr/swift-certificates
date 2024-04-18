@@ -33,7 +33,7 @@ import _CertificateInternals
 /// Note that ``RelativeDistinguishedName`` does not have a stable ordering of its elements. Inserting an element
 /// at index `i` does not guarantee it will remain at that location. As a result, ``RelativeDistinguishedName`` is
 /// not a `MutableCollection`.
-public struct RelativeDistinguishedName {
+@frozen public struct RelativeDistinguishedName {
     @usableFromInline
     var attributes: _TinyArray<Attribute>
 
