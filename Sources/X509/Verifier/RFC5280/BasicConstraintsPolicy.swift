@@ -15,7 +15,7 @@ import Foundation
 import SwiftASN1
 
 /// A sub-policy of the ``RFC5280Policy`` that polices the basicConstraints extension.
-@usableFromInline
+@frozen @usableFromInline
 struct BasicConstraintsPolicy: VerifierPolicy {
     @usableFromInline
     let verifyingCriticalExtensions: [ASN1ObjectIdentifier] = [

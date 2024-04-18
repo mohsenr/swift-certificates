@@ -39,7 +39,7 @@ import SwiftASN1
 @usableFromInline
 typealias UniqueIdentifier = ASN1BitString
 
-@usableFromInline
+@frozen @usableFromInline
 struct TBSCertificate: DERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

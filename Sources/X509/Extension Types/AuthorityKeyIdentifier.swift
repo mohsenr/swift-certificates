@@ -125,7 +125,7 @@ extension AuthorityKeyIdentifier: CertificateExtensionConvertible {
 }
 
 // MARK: ASN1 helpers
-@usableFromInline
+@frozen @usableFromInline
 struct AuthorityKeyIdentifierValue: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

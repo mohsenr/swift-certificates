@@ -197,7 +197,7 @@ extension GeneralName.OtherName: CustomStringConvertible {
     }
 }
 
-@usableFromInline
+@frozen @usableFromInline
 struct GeneralNames: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

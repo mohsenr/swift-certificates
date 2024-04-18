@@ -69,7 +69,7 @@ extension CertificateSigningRequest.Attribute {
     }
 }
 
-@usableFromInline
+@frozen @usableFromInline
 struct ExtensionRequestAttribute: Hashable, Sendable, DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

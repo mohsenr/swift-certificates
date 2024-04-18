@@ -25,7 +25,7 @@ import Crypto
 /// We define this type here because an X.509 certificate may have an ECDSA signature
 /// in it without reference to what key created it. We need to be able to store it
 /// abstractly, and then turn it into the signature type we need on request.
-@usableFromInline
+@frozen @usableFromInline
 struct ECDSASignature: DERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

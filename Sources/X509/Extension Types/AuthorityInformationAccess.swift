@@ -251,7 +251,7 @@ extension AuthorityInformationAccess: CertificateExtensionConvertible {
 // AccessDescription  ::=  SEQUENCE {
 //         accessMethod          OBJECT IDENTIFIER,
 //         accessLocation        GeneralName  }
-@usableFromInline
+@frozen @usableFromInline
 struct AuthorityInfoAccessSyntax: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {
@@ -281,7 +281,7 @@ struct AuthorityInfoAccessSyntax: DERImplicitlyTaggable {
     }
 }
 
-@usableFromInline
+@frozen @usableFromInline
 struct AIAAccessDescription: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

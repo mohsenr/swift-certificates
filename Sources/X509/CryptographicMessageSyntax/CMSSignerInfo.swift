@@ -33,7 +33,7 @@ import SwiftASN1
 /// - Note: If the `SignerIdentifier` is the CHOICE `issuerAndSerialNumber`,
 /// then the `version` MUST be 1.  If the `SignerIdentifier` is `subjectKeyIdentifier`,
 /// then the `version` MUST be 3.
-@usableFromInline
+@frozen @usableFromInline
 struct CMSSignerInfo: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @usableFromInline
     enum Error: Swift.Error {

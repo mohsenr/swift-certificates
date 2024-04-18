@@ -398,7 +398,7 @@ extension ASN1ObjectIdentifier {
     }
 }
 
-@usableFromInline
+@frozen @usableFromInline
 struct ASN1ExtendedKeyUsage: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

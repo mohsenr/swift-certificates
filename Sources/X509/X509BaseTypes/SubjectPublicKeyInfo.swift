@@ -14,7 +14,7 @@
 
 import SwiftASN1
 
-@usableFromInline
+@frozen @usableFromInline
 struct SubjectPublicKeyInfo: DERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

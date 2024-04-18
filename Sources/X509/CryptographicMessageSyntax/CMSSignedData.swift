@@ -41,7 +41,7 @@ import SwiftASN1
 ///   otherCert ANY DEFINED BY otherCertFormat }
 /// ```
 /// - Note: At the moment we don't support `crls` (`RevocationInfoChoices`)
-@usableFromInline
+@frozen @usableFromInline
 struct CMSSignedData: DERImplicitlyTaggable, BERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

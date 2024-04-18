@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 import SwiftASN1
 
-@usableFromInline
+@frozen @usableFromInline
 struct CertificationRequestInfo {
     @usableFromInline
     var version: CertificateSigningRequest.Version

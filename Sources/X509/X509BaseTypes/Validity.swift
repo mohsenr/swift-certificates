@@ -17,7 +17,7 @@ import SwiftASN1
 // Validity ::= SEQUENCE {
 // notBefore      Time,
 // notAfter       Time  }
-@usableFromInline
+@frozen @usableFromInline
 struct Validity: DERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

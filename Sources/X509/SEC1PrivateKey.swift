@@ -36,7 +36,7 @@ import SwiftASN1
 //   parameters [0] EXPLICIT ECDomainParameters OPTIONAL,
 //   publicKey [1] EXPLICIT BIT STRING OPTIONAL
 // }
-@usableFromInline
+@frozen @usableFromInline
 struct SEC1PrivateKey: DERImplicitlyTaggable, PEMRepresentable {
     @usableFromInline
     static let defaultPEMDiscriminator: String = "EC PRIVATE KEY"

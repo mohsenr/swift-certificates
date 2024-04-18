@@ -24,7 +24,7 @@ import SwiftASN1
 /// ```
 ///
 /// This type can decode that format.
-@usableFromInline
+@frozen @usableFromInline
 struct RSAPKCS1PublicKey: DERImplicitlyTaggable, Hashable, Sendable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

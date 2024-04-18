@@ -739,7 +739,7 @@ extension NameConstraints: CertificateExtensionConvertible {
 }
 
 // MARK: ASN1 Helpers
-@usableFromInline
+@frozen @usableFromInline
 struct NameConstraintsValue: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {
@@ -827,7 +827,7 @@ struct NameConstraintsValue: DERImplicitlyTaggable {
 // literally mirror that in Swift land, but at the top level we want to hold [GeneralName], so producing
 // [GeneralSubtree] will force a heap allocation. Instead, we inline the definition of GeneralSubtree into
 // GeneralSubtrees, to avoid the extra allocation.
-@usableFromInline
+@frozen @usableFromInline
 struct GeneralSubtrees: DERImplicitlyTaggable {
     @inlinable
     static var defaultIdentifier: ASN1Identifier {

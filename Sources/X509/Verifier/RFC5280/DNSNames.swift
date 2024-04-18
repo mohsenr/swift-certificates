@@ -223,7 +223,7 @@ extension String.UTF8View {
     }
 }
 
-@usableFromInline
+@frozen @usableFromInline
 struct ReverseDNSLabelSequence: Sequence {
     @usableFromInline
     var base: String.UTF8View.SubSequence
