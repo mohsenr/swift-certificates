@@ -192,6 +192,7 @@ extension PolicyBuilder {
 }
 
 extension PolicyBuilder {
+    @frozen
     @usableFromInline
     struct CachedVerifyingCriticalExtensions<Wrapped: VerifierPolicy>: VerifierPolicy {
         @usableFromInline

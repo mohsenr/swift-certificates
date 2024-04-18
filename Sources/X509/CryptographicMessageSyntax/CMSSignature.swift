@@ -88,6 +88,7 @@ extension CMSSignature {
     ///
     /// Note that the signer has not been validated, so it is possible that the signer did not actually
     /// sign the block in question.
+    @frozen
     @_spi(CMS)
     public struct Signer: Sendable, Hashable {
         public let certificate: Certificate
